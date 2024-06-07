@@ -15,10 +15,5 @@ public class Verite extends Affirmation {
     public Boolean getStatusAffirmation() {
         return true;
     }
-
-    @Override
-    public String[] splitAffirmation() {
-        return new String[]{getPhrase()};
-    }
 }
 

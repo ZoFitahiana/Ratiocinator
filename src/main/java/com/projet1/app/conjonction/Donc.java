@@ -23,10 +23,5 @@ public class Donc extends Affirmation {
     public Boolean getStatusAffirmation() {
         return !affirmation1.getStatusAffirmation() || affirmation2.getStatusAffirmation();
     }
-
-    @Override
-    public String[] splitAffirmation() {
-        return new String[]{affirmation1.getPhrase(), affirmation2.getPhrase()};
-    }
 }
 

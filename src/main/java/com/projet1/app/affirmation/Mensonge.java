@@ -15,9 +15,5 @@ public class Mensonge extends Affirmation {
         return false;
     }
 
-    @Override
-    public String[] splitAffirmation() {
-        return new String[]{getPhrase()};
-    }
 }
 

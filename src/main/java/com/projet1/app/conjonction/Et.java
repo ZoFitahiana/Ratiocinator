@@ -24,8 +24,4 @@ public class Et extends Affirmation {
         return affirmation1.getStatusAffirmation() && affirmation2.getStatusAffirmation();
     }
 
-    @Override
-    public String[] splitAffirmation() {
-        return new String[]{affirmation1.getPhrase(), affirmation2.getPhrase()};
-    }
 }

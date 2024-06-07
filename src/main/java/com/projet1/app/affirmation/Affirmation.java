@@ -11,6 +11,4 @@ import lombok.*;
 public abstract class Affirmation {
     private String phrase;
     public abstract Boolean getStatusAffirmation();
-
-    public abstract String[] splitAffirmation();
 }
