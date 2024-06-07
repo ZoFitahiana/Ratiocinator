@@ -15,8 +15,8 @@ public class Ou extends Affirmation {
     private Affirmation affirmation2;
     @Override
     public Boolean getStatusAffirmation() {
-        return null;
+        return affirmation1.getStatusAffirmation() || affirmation2.getStatusAffirmation();
     }
 }
-}
+
 
