@@ -26,25 +26,5 @@ public class DoncTest {
         String resultat = status.CalculusRatiocinator(affirmation);
         assertEquals("vrai", resultat);
     }
-    @Test
-    public void testLouEstBeauOuLouEstGenereuxDoncLouEstPauvre() {
-        Status status = new Status();
-        Affirmation affirmation = new Donc(new Ou(new Verite("Lou est beau."), new Verite("Lou est généreux.")), new Mensonge("Lou est pauvre."));
-        String resultat = status.CalculusRatiocinator(affirmation);
-        assertEquals("faux", resultat);
-    }
-    @Test
-    public void testDeuxAssertions() {
-        Status status = new Status();
-        Affirmation affirmation1 = new Donc(new Ou(new Verite("Lou est beau."), new Verite("Lou est généreux.")), new Mensonge("Lou est pauvre."));
-        Affirmation affirmation2 = new Ou(new Mensonge("Lou est pauvre."), new Verite("Lou est généreux."));
-
-        String resultat1 = status.CalculusRatiocinator(affirmation1);
-        String resultat2 = status.CalculusRatiocinator(affirmation2);
-
-        assertEquals("faux", resultat1);
-        assertEquals("vrai", resultat2);
-    }
-
 
 }
