@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class OuTest {
+public class OuTeste {
     @Test
     public void testOu() {
         Status status = new Status();

@@ -1,20 +1,18 @@
-package com.projet1.app.Status.conjonction;
+package com.projet1.app.Status;
+
 import com.projet1.app.affirmation.Affirmation;
 import com.projet1.app.affirmation.Mensonge;
-import com.projet1.app.affirmation.Verite;
 import com.projet1.app.affirmation.statuts.Status;
-import com.projet1.app.conjonction.Et;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EtTest {
+public class MensongeTeste {
     @Test
-    public void testLouEstPauvreEtLouEstGenereux() {
+    public void testMensonge() {
         Status status = new Status();
-        Affirmation affirmation = new Et(new Mensonge("Lou est pauvre."), new Verite("Lou est généreux."));
+        Affirmation affirmation = new Mensonge("Lou est pauvre.");
         String resultat = status.CalculusRatiocinator(affirmation);
         assertEquals("faux", resultat);
     }
-
 }

@@ -5,12 +5,11 @@ import com.projet1.app.affirmation.Mensonge;
 import com.projet1.app.affirmation.Verite;
 import com.projet1.app.affirmation.statuts.Status;
 import com.projet1.app.conjonction.Donc;
-import com.projet1.app.conjonction.Ou;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DoncTest {
+public class DoncTeste {
     @Test
     public void testLouEstBeauDoncLouEstPauvre() {
         Status status = new Status();
