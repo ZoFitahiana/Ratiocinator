@@ -14,4 +14,10 @@ public class Mensonge extends Affirmation {
     public Boolean getStatusAffirmation() {
         return false;
     }
+
+    @Override
+    public String[] splitAffirmation() {
+        return new String[]{getPhrase()};
+    }
 }
+
