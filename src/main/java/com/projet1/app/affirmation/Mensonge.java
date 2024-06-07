@@ -15,4 +15,3 @@ public class Mensonge extends Affirmation {
         return false;
     }
 }
-}
