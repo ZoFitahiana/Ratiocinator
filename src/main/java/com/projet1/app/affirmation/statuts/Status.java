@@ -24,9 +24,8 @@ public class Status {
                return "faux";
           } else if (affirmation instanceof Et) {
                Et et = (Et) affirmation;
-               String[] affirmations = et.splitAffirmation();
-               String status1 = CalculusRatiocinator(creationAffirmation(affirmations[0]));
-               String status2 = CalculusRatiocinator(creationAffirmation(affirmations[1]));
+               String status1 = CalculusRatiocinator(et.getAffirmation1());
+               String status2 = CalculusRatiocinator(et.getAffirmation2());
                if (status1.equals("vrai") && status2.equals("vrai")) {
                     return "vrai";
                } else if (status1.equals("faux") || status2.equals("faux")) {
@@ -36,9 +35,8 @@ public class Status {
                }
           } else if (affirmation instanceof Ou) {
                Ou ou = (Ou) affirmation;
-               String[] affirmations = ou.splitAffirmation();
-               String status1 = CalculusRatiocinator(creationAffirmation(affirmations[0]));
-               String status2 = CalculusRatiocinator(creationAffirmation(affirmations[1]));
+               String status1 = CalculusRatiocinator(ou.getAffirmation1());
+               String status2 = CalculusRatiocinator(ou.getAffirmation2());
                if (status1.equals("vrai") || status2.equals("vrai")) {
                     return "vrai";
                } else if (status1.equals("faux") && status2.equals("faux")) {
@@ -48,9 +46,8 @@ public class Status {
                }
           } else if (affirmation instanceof Donc) {
                Donc donc = (Donc) affirmation;
-               String[] affirmations = donc.splitAffirmation();
-               String status1 = CalculusRatiocinator(creationAffirmation(affirmations[0]));
-               String status2 = CalculusRatiocinator(creationAffirmation(affirmations[1]));
+               String status1 = CalculusRatiocinator(donc.getAffirmation1());
+               String status2 = CalculusRatiocinator(donc.getAffirmation2());
                if (status1.equals("vrai") && status2.equals("faux")) {
                     return "faux";
                } else if (status1.equals("faux") || status2.equals("vrai")) {
@@ -61,6 +58,7 @@ public class Status {
           }
           return "jenesaispas";
      }
+
 
      private Affirmation creationAffirmation(String phrase) {
           String phraseLowerCase = phrase.toLowerCase();
