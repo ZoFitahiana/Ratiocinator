@@ -1,12 +1,11 @@
 package com.projet1.app.affirmation;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
 public class Verite extends Affirmation {
     public Verite(String phrase) {
         super(phrase);
@@ -18,7 +17,7 @@ public class Verite extends Affirmation {
     }
 
     @Override
-    public String[] splitAffirmation() {    
+    public String[] splitAffirmation() {
         return new String[]{getPhrase()};
     }
 }
